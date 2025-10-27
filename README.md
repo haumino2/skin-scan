@@ -2,6 +2,8 @@
 
 Production-grade skin analysis API that generates 7 category maps from facial images: redness, oiliness, texture, pores, blemishes, hydration, and pigmentation.
 
+**✨ 100% Free & Open Source** - No API keys or external services required. All processing runs locally using OpenCV and MediaPipe.
+
 ## Quickstart
 
 ### Local

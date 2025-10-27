@@ -11,9 +11,7 @@ class Settings(BaseSettings):
 
     env: str = "dev"
     log_level: str = "INFO"
-    max_image_size: int = 2048
-    anthropic_api_key: str = ""
-    aws_bearer_token_bedrock: str = ""
+    max_image_size: int = 2048  # Max image size in KB
 
 
 @lru_cache

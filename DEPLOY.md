@@ -42,21 +42,11 @@ git push -u origin main
 - **Start Command:** `uvicorn src.app.main:app --host 0.0.0.0 --port $PORT`
 - **Plan:** Free
 
-### 3. Set Environment Variables
+### 3. Environment Variables
 
-In Render dashboard, add these environment variables:
+**Good news:** The `render.yaml` file already has all necessary environment variables configured!
 
-```
-ENV=production
-LOG_LEVEL=INFO
-MAX_IMAGE_SIZE=2048
-```
-
-**Optional (if you want to use your API keys):**
-```
-ANTHROPIC_API_KEY=your_key_here
-AWS_BEARER_TOKEN_BEDROCK=your_token_here
-```
+No API keys needed - the skin analysis runs 100% locally using OpenCV and MediaPipe. Completely free!
 
 ### 4. Deploy
 
