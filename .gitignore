@@ -49,9 +49,11 @@ Thumbs.db
 
 # Project specific
 scans/
+results/
 *.pt
 *.pth
 *.onnx
+*.zip
 
 # Git
 .git/

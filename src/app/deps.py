@@ -30,12 +30,6 @@ def setup_logging(level: str = "INFO") -> None:
     )
 
 
-# CORS origins for development
-# Allow file:// for local HTML files and common dev ports
-CORS_ORIGINS = [
-    "http://localhost:3000",
-    "http://localhost:8000",
-    "http://127.0.0.1:8000",
-    "http://localhost:8080",
-    "null",  # For file:// protocol
-]
+# CORS origins - Allow all origins for public API
+# In production, the web UI is served from the same domain
+CORS_ORIGINS = ["*"]  # Allow all origins for public access

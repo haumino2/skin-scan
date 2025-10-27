@@ -14,22 +14,32 @@ let originalImage = null;
 // Enable scan button when file is selected
 fileInput.addEventListener('change', (e) => {
     selectedFile = e.target.files[0];
-    scanBtn.disabled = !selectedFile;
 
-    // Load original image
     if (selectedFile) {
+        scanBtn.disabled = false;
+        scanBtn.style.opacity = '1';
+        scanBtn.style.cursor = 'pointer';
+
+        // Load original image
         const reader = new FileReader();
         reader.onload = (e) => {
             originalImage = new Image();
             originalImage.src = e.target.result;
         };
         reader.readAsDataURL(selectedFile);
+    } else {
+        scanBtn.disabled = true;
+        scanBtn.style.opacity = '0.5';
+        scanBtn.style.cursor = 'not-allowed';
     }
 });
 
 // Scan button click handler
 scanBtn.addEventListener('click', async () => {
-    if (!selectedFile) return;
+    if (!selectedFile) {
+        alert('Please select an image first');
+        return;
+    }
 
     // Reset UI
     error.style.display = 'none';

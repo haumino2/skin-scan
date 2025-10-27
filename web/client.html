@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skin Scan Demo</title>
+    <title>Skin Scan Analysis</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -27,7 +27,10 @@
             border-radius: 8px;
             text-align: center;
         }
-        input[type="file"] { margin: 10px 0; }
+        input[type="file"] {
+            margin: 10px 0;
+            cursor: pointer;
+        }
         button {
             background: #007bff;
             color: white;
@@ -109,13 +112,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>Skin Scan Analysis Demo</h1>
+        <h1>Skin Scan Analysis</h1>
 
         <div class="upload-section">
             <h2>Upload Face Image</h2>
             <input type="file" id="fileInput" accept="image/*">
             <br>
-            <button id="scanBtn" disabled>Scan Image</button>
+            <button id="scanBtn">Scan Image</button>
         </div>
 
         <div id="loading" class="loading" style="display:none;">
@@ -135,6 +138,6 @@
         </div>
     </div>
 
-    <script src="demo.js"></script>
+    <script src="/static/demo.js"></script>
 </body>
 </html>
